@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="row">
+    <div class="col-md-6 well col-md-offset-2">
+        <br /><br /><br />
+        <form action="./Home/Login">
+            <label>
+                Username:
+            </label>
+            <input type="text" name="username" class="form-control"/>
+
+            <br />
+
+            <label>
+                Passwort:
+            </label>
+            <input type="password" name="passwort" class="form-control"/>
+            <br />
+            <label>
+                Eingeloggt bleiben:
+            </label>
+            <input type="checkbox" name="stay_logged_in" class="form-control" />
+            <br />
+            <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+
+    </div>
+</div>
