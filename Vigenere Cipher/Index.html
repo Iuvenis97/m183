@@ -7,6 +7,7 @@
             <div class="row">
             <div class="col-md-12">
                 <h1>Ceasar Cipher</h1>
+                <h1>Vigenere Cipher</h1>
             </div>
             </div>
             <div>
@@ -141,14 +142,17 @@
                             if ((cr >= 65) && (cr <= 90)) {
                                 var c = parseInt(cr - 65);
                                 var key_char_shift = parseInt(key[i].charCodeAt(0) - 65);
+                                var key_char_shift = parseInt(key[j % key.length].charCodeAt(0) - 65);
                                 var new_char_position = (c - key_char_shift) % 26;
                                 if (new_char_position < 0) {
                                     new_char_position += 26;
                                 }
+
                                 output += String.fromCharCode(new_char_position + 65) ;
                                 j++;
                             }
                             else if ((c >= 97) && (c <= 122)) {
+                            else if ((cr >= 97) && (cr <= 122)) {
                                 var c = parseInt(cr - 97);
                                 var key_char_shift = parseInt(key[j % key.length].charCodeAt(0) - 97);
                                 var new_char_position = (c - key_char_shift) % 26;
@@ -162,7 +166,6 @@
                     }
                     return output;
                 }
-
             </script>
             <div>
 
